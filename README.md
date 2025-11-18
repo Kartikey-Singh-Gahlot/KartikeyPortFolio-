@@ -9,6 +9,6 @@ A full stack personal portfolio site showcasing my work and achievements
 -  decent and attractive design and smooth functionality all over the web page
 
 ## Tech Stack
-- Frontend: React.js, Tailwindcss
+- Frontend: Next.js, Tailwindcss
 - Backend: Node.js, Express.js, MongoDB
 
