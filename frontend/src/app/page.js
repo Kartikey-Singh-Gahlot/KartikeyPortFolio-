@@ -84,7 +84,7 @@ function trgrMobNav(){
           </header>
 
           
-          <motion.section className="h-screen flex flex-col justify-evenly gap-10 pages " initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+          <motion.section className="h-screen flex flex-col justify-evenly gap-10 pages " initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
  id="pageOne">
 
                <div className=" flex flex-col min-[430px]:flex-row  min-[430px]:justify-evenly items-center justify-center box-border min-[430px]:px-10  gap-10">
@@ -115,7 +115,7 @@ function trgrMobNav(){
 
           </motion.section>
 
-          <motion.section className="pages grid min-[780px]:grid-cols-[1fr_2fr] min-[780px]:grid-row-auto grid-col-1 grid-row-[1fr_2fr] min-[780px]:gap-0 gap-10 box-border px-5 pt-10 pb-30" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+          <motion.section className="pages grid min-[780px]:grid-cols-[1fr_2fr] min-[780px]:grid-row-auto grid-col-1 grid-row-[1fr_2fr] min-[780px]:gap-0 gap-10 box-border px-5 pt-10 pb-30" initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
  id="pageTwo">
                <div className="flex justify-center items-end">
                     <ul className= "flex min-[780px]:flex-col  w-full flex-row  justify-evenly min-[780px]:gap-0 gap-2">
@@ -136,7 +136,7 @@ function trgrMobNav(){
 
           {(descriptionData != null )?
 
-          <motion.section initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+          <motion.section initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
 > 
                <Headings pageHeading="Experience" pageHeadingStyle="w-full text-center" /> 
                <Experience data = {descriptionData.experience}/>
@@ -146,10 +146,11 @@ function trgrMobNav(){
           }
 
           {(descriptionData != null)?
-            <section className="pages h-fit flex flex-col  items-center justify-between gap-10 pt-10 pb-30 " id="pageThree">
+            <motion.section className="pages h-fit flex flex-col  items-center justify-between gap-10 pt-10 pb-30 " initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+ id="pageThree">
                <Headings pageHeadingStyle="w-full" pageHeading="Projects"/>
                <Projects data = {descriptionData.project} />  
-          </section>
+            </motion.section>
          
           :<Loader/>
           }
@@ -157,7 +158,7 @@ function trgrMobNav(){
 
 
          
-          <motion.section className="pages h-fit flex flex-col items-center"  initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+          <motion.section className="pages h-fit flex flex-col items-center"  initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
 id="pageFour">
 
                       <Headings pageHeadingStyle="w-full" pageHeading="Get In Touch"/>
