@@ -146,11 +146,10 @@ function trgrMobNav(){
           }
 
           {(descriptionData != null)?
-            <motion.section className="pages h-fit flex flex-col  items-center justify-between gap-10 pt-10 pb-30 " initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
- id="pageThree">
+            <section className="pages h-fit flex flex-col  items-center justify-between gap-10 pt-10 pb-30 " id="pageThree">
                <Headings pageHeadingStyle="w-full" pageHeading="Projects"/>
                <Projects data = {descriptionData.project} />  
-            </motion.section>
+            </section>
          
           :<Loader/>
           }
