@@ -84,7 +84,7 @@ function trgrMobNav(){
           </header>
 
           
-          <motion.section className="h-screen flex flex-col justify-evenly gap-10 pages " initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+          <motion.section className="h-screen flex flex-col justify-evenly gap-10 pages " initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
  id="pageOne">
 
                <div className=" flex flex-col min-[430px]:flex-row  min-[430px]:justify-evenly items-center justify-center box-border min-[430px]:px-10  gap-10">
