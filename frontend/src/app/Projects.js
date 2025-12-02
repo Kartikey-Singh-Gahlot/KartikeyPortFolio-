@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 
 export default function Projects({data}){
 
@@ -23,8 +27,8 @@ export default function Projects({data}){
     })
 
     return(
-        <ul className="grid grid-cols-1  min-[780px]:grid-cols-3 min-[500px]:grid-cols-2  grid-rows-auto gap-2 p-5 relative">
+        <motion.ul className="grid grid-cols-1  min-[780px]:grid-cols-3 min-[500px]:grid-cols-2  grid-rows-auto gap-2 p-5 relative">
              {processed}
-        </ul>   
+        </motion.ul>   
     );
 }
