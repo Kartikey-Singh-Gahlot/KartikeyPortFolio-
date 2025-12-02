@@ -10,6 +10,7 @@ import {mailLink, cvLink, myPicLink, headerData, navData , hrData, backendApiBas
 import { useState, useEffect } from "react";
 import Experience from "./Experience.js";
 import Loader from "./Loader.js";
+import { motion } from "framer-motion";
 
 
 export default function Home(){
@@ -83,8 +84,8 @@ function trgrMobNav(){
           </header>
 
           
-
-          <section className="h-screen flex flex-col justify-evenly gap-10 pages " id="pageOne">
+          <motion.section className="h-screen flex flex-col justify-evenly gap-10 pages " initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+ id="pageOne">
 
                <div className=" flex flex-col min-[430px]:flex-row  min-[430px]:justify-evenly items-center justify-center box-border min-[430px]:px-10  gap-10">
 
@@ -112,9 +113,10 @@ function trgrMobNav(){
               
                <Skills skills={["HTML","CSS","Tailwindcss","JavaScript","React JS","Git-GitHub","MySQL","MongoDB", "Node JS","Express JS","Java","DSA"]} />
 
-          </section>
+          </motion.section>
 
-          <section className="pages grid min-[780px]:grid-cols-[1fr_2fr] min-[780px]:grid-row-auto grid-col-1 grid-row-[1fr_2fr] min-[780px]:gap-0 gap-10 box-border px-5 pt-10 pb-30" id="pageTwo">
+          <motion.section className="pages grid min-[780px]:grid-cols-[1fr_2fr] min-[780px]:grid-row-auto grid-col-1 grid-row-[1fr_2fr] min-[780px]:gap-0 gap-10 box-border px-5 pt-10 pb-30" initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+ id="pageTwo">
                <div className="flex justify-center items-end">
                     <ul className= "flex min-[780px]:flex-col  w-full flex-row  justify-evenly min-[780px]:gap-0 gap-2">
                          <li className="box-border  h-full text-center  sm:text-3xl text-[12px]  px-3 py-2 min-[780px]:border-l-3 min-[780px]:border-b-0 border-b-3 border-l-0 border-amber-50 text-amber-50 w-full">Web Development</li>
@@ -129,15 +131,16 @@ function trgrMobNav(){
                          Motivated and goal driven B-tech CSE student of JECRC University, Jaipur. I have a strong foundation in programming, DSA and web development along with great problem solving skills. I want to secure a Software Development Engineering role at a organization for which I can work for the betterment of myself as well as the organization.
                    </p>
                 </div>
-          </section>
+          </motion.section>
 
 
           {(descriptionData != null )?
 
-          <section> 
+          <motion.section initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+> 
                <Headings pageHeading="Experience" pageHeadingStyle="w-full text-center" /> 
                <Experience data = {descriptionData.experience}/>
-          </section>
+          </motion.section>
 
           :<Loader/>
           }
@@ -154,7 +157,8 @@ function trgrMobNav(){
 
 
          
-          <section className="pages h-fit flex flex-col items-center" id="pageFour">
+          <motion.section className="pages h-fit flex flex-col items-center"  initial={{ opacity: 0, y: 100 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ amount: 0.2 }} 
+id="pageFour">
 
                       <Headings pageHeadingStyle="w-full" pageHeading="Get In Touch"/>
 
@@ -171,7 +175,7 @@ function trgrMobNav(){
                         </ul>
                          <h1 className="w-full text-center text-[15px] py-5 text-gray-400">© 2025 Kartz-Portfolio. All rights reserved.</h1>
                     </footer>               
-          </section>
+          </motion.section>
     </div>
   )
 }
