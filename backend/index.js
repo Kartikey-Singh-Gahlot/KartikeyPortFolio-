@@ -13,12 +13,12 @@ app.use(cors({
 
 connectDb().then(()=>{
    console.log("connected");
+   app.listen(8080, ()=>{
+    console.log("listening");
+   });
 }).catch(()=>{
   process.exit(1);
 })
 
-
 app.use("/",Routes);
 
-
-module.exports = app;
